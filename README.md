@@ -1,15 +1,20 @@
-▶️ How to Run (One-Line Command)
-Step 1: Open PowerShell
+# ▶️ How to Run (One-Line Command)
 
-Press Win + X
+## Step 1: Open PowerShell
 
-Select Windows PowerShell (or Terminal)
+1. Press **Win + X**
+2. Select **Windows PowerShell** (or **Terminal**)
 
-❗ You do NOT need to open PowerShell as Administrator.
-The command will request elevation automatically.
+> ❗ **You do NOT need to open PowerShell as Administrator.**  
+> The command below will request elevation automatically.
 
-Step 2: Copy & Paste the Command Below
+---
+
+## Step 2: Copy & Paste the Command Below
+
+```powershell
 powershell -Command "Start-Process cmd.exe -Verb RunAs -ArgumentList '/c reg add \"HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Printers\RPC\" /v RpcUseNamedPipeProtocol /t REG_DWORD /d 1 /f & reg add \"HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Printers\RPC\" /v RpcProtocols /t REG_DWORD /d 0x7 /f & reg add \"HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Printers\RPC\" /v ForceKerberosForRpc /t REG_DWORD /d 1 /f & reg add \"HKLM\System\CurrentControlSet\Control\Print\" /v RpcAuthnLevelPrivacyEnabled /t REG_DWORD /d 0 /f & reg add \"HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters\" /v AllowInsecureGuestAuth /t REG_DWORD /d 1 /f & powershell Set-SmbClientConfiguration -RequireSecuritySignature $false -Force & powershell Set-SmbClientConfiguration -EnableInsecureGuestLogons $true -Force & wusa /uninstall /kb:5072033 /quiet /norestart'"
+```
 
 Step 3: Accept UAC Prompt
 
