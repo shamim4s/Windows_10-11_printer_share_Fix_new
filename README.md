@@ -2,12 +2,9 @@
 
 ## Step 1: Open PowerShell
 
-1. Press **Win + X**
-2. Select **Windows PowerShell** (or **Terminal**)
-
-> ❗ **You do NOT need to open PowerShell as Administrator.**  
-> The command below will request elevation automatically.
-
+1. Press **Start Menu (Win Logo)**
+2. Type **cmd**
+3. Select **cmd**
 ---
 
 ## Step 2: Copy & Paste the Command Below
