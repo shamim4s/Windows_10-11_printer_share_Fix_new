@@ -4,7 +4,7 @@
 
 1. Press **Start Menu (Win Logo)**
 2. Type **cmd**
-3. Select **cmd**
+3. Select **cmd ( Command Prompt )**
 ---
 
 ## Step 2: Copy & Paste the Command Below
