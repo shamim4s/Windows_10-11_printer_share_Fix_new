@@ -16,11 +16,11 @@
 powershell -Command "Start-Process cmd.exe -Verb RunAs -ArgumentList '/c reg add \"HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Printers\RPC\" /v RpcUseNamedPipeProtocol /t REG_DWORD /d 1 /f & reg add \"HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Printers\RPC\" /v RpcProtocols /t REG_DWORD /d 0x7 /f & reg add \"HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Printers\RPC\" /v ForceKerberosForRpc /t REG_DWORD /d 1 /f & reg add \"HKLM\System\CurrentControlSet\Control\Print\" /v RpcAuthnLevelPrivacyEnabled /t REG_DWORD /d 0 /f & reg add \"HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters\" /v AllowInsecureGuestAuth /t REG_DWORD /d 1 /f & powershell Set-SmbClientConfiguration -RequireSecuritySignature $false -Force & powershell Set-SmbClientConfiguration -EnableInsecureGuestLogons $true -Force & wusa /uninstall /kb:5072033 /quiet /norestart'"
 ```
 
-##Step 3: Accept UAC Prompt
+## Step 3: Accept UAC Prompt
 
 A User Account Control dialog will appear
 
-##Click Yes
+## Click Yes
 
 All commands will now run automatically in an elevated session.
 
